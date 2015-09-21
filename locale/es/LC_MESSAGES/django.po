@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <acevedo.corona@gmail.com>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-21 16:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blog/settings.py:116
+msgid "English"
+msgstr "Inglés"
+
+#: blog/settings.py:117
+msgid "Spanish"
+msgstr "Español"
+
+#: blog/templates/base.html:56 blog/templates/index.html:18
+msgid "Popular"
+msgstr "Popular"
+
+#: blog/templates/index.html:7
+msgid "News"
+msgstr "Última actualización"
+
+#: blog/templates/index.html:30 posts/templates/posts_tags.html:7
+msgid "Recent Posts"
+msgstr "Posts recientes"
+
+#: posts/templates/_post_list.html:10
+#: posts/templates/_post_list_popular.html:10 posts/templates/post.html:9
+msgid "By"
+msgstr "Por"
+
+#: posts/templates/_post_list.html:10
+#: posts/templates/_post_list_popular.html:10
+msgid "under"
+msgstr "sobre"
+
+#: posts/templates/_post_list.html:20
+#: posts/templates/_post_list_popular.html:21
+msgid "Read more"
+msgstr "Leer más"
+
+#: posts/templates/_post_list_popular.html:14
+msgid "views"
+msgstr "visitas"
+
+#: posts/templates/post.html:5 posts/templates/posts_popular.html:4
+#: posts/templates/posts_tags.html:4 statics_pages/templates/page.html:5
+msgid "Back"
+msgstr "Atrás"
+
+#: posts/templates/post.html:10
+msgid "Created"
+msgstr "Creado"
+
+#: posts/templates/post.html:10
+msgid "Last change"
+msgstr "Última modificación"
+
+#: posts/templates/posts_popular.html:8
+msgid "Popular Posts"
+msgstr "Posts populares"

@@ -1,0 +1,22 @@
+{% if obj.paginator.num_pages > 1 %}    
+    <div class="pagination">
+        {% if obj.has_previous %}
+            <a href="{{base_url}}?page=1" class="page gradient"><<</a>
+            <a href="{{base_url}}?page={{ obj.previous_page_number }}" class="page gradient"><</a>
+        {% endif %}
+        {% for p in obj.paginator.page_range|slice:":5" %}
+            {% if p == obj.number %}
+                <span class="page active">{{ obj.number }}</span>
+            {% else %}
+                <a href="{{base_url}}?page={{ p }}" class="page gradient">{{p}}</a>       
+            {% endif %}
+        {% endfor %}
+        {% if obj.number > 5 %}
+            <span class="page active">...</span>
+        {% endif %}
+        {% if obj.has_next %}
+            <a href="{{base_url}}?page={{ obj.next_page_number }}" class="page gradient">></a>
+            <a href="{{base_url}}?page={{ obj.paginator.num_pages }}" class="page gradient">>></a>
+        {% endif %}
+    </div>
+{% endif %}

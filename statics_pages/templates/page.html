@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block seo %}{{page.text|slice:":200"}}{% endblock %}
+{% block post %}
+<a href="{{request.META.HTTP_REFERER}}" class="back">< {% trans "Back" %}</a>
+	<section class="post-container">
+		<h2 class="post-title">{{page.title}}</h2>
+		<section>
+			<article class="post-description">
+				{{page.text|safe}}
+			</article>
+		</section>
+	</section>
+{% endblock %}

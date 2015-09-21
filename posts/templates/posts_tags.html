@@ -1,0 +1,16 @@
+    {% extends "base.html" %}
+    {% load i18n %}
+    {% block posts_tags_popular %}
+	    <a href="/" class="back">< {% trans "Back" %}</a>
+	    {% if posts|length > 0 %}            
+	        <div class="posts">
+	            <h1 class="content-subhead">{% trans "Recent Posts" %}: {{tag.name}}</h1>
+	            {% for post in posts %}
+	                {% include '_post_list.html' %}
+	            {% endfor %}
+	            
+	            {% include '_pagination.html' with obj=posts base_url='/post/tag/{{tag.slug}}/' %}
+
+	        </div>
+	    {% endif %}
+    {% endblock %}

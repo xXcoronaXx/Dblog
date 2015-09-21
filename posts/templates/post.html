@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block seo %}{{post.text|slice:":200"|striptags}}{% endblock %}
+{% block post %}
+<a href="{{request.META.HTTP_REFERER}}" class="back">< {% trans "Back" %}</a>
+	<section class='post-container'>
+		<h2 class="post-title">{{post.title}}</h2>
+            <p class="post-meta">
+                {% trans "By" %} <a href="#" class="post-author">{{post.author}}</a> 
+				{% trans "Created" %}: {{post.created|date:"M d, Y"}}  |  {% trans "Last change" %}: {{post.modified|date:"M d, Y"}}
+            </p>
+		<section>
+			<article class="post-description">
+				{{post.text|safe}}
+			</article>
+			{% for tag in post.tags.all %}
+				<a class="post-category post-category-design" title="{{tag}}" href="{% url 'posts_tag' tag.slug %}">{{tag}}</a>
+			{% endfor %}
+		</section>
+	</section>
+{% include '_disqus.html' %}
+{% endblock %}
