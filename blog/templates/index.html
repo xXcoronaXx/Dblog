@@ -16,9 +16,7 @@
         <div>
             <div class="posts">
                 <h1 class="content-subhead"><strong>{% trans "Popular" %}</strong></h1>
-                    {% for post in posts %}
                         {% include '_post_list_popular.html' with post=popular %}
-                    {% endfor %}
             </div>
         </div>
     {% endif %}
