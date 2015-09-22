@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 from types import NoneType
 
 from .models import *
@@ -11,7 +11,7 @@ def post_view(request, slug):
 	post.save()
 	return render(request, 'post.html', { 'post': post })
 
-@login_required
+@user_passes_test(lambda u: u.is_staff)
 def post_preview(request, slug):
 	post = get_object_or_404( Post, slug=slug, visible=False )
 	return render(request, 'post.html', { 'post': post })
