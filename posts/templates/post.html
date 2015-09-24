@@ -5,6 +5,7 @@
 <a href="{{request.META.HTTP_REFERER}}" class="back">< {% trans "Back" %}</a>
 	<section class='post-container'>
 		<h2 class="post-title">{{post.title}}</h2>
+		{% include "_social.html" %}
             <p class="post-meta">
                 {% trans "By" %} <a href="#" class="post-author">{{post.author}}</a> 
 				{% trans "Created" %}: {{post.created|date:"M d, Y"}}  |  {% trans "Last change" %}: {{post.modified|date:"M d, Y"}}

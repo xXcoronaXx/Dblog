@@ -13,5 +13,6 @@ def config(request):
 			'show_popular_link': conf.show_popular_link,
 			'show_popular_widget': conf.show_popular_widget,
 			'FooterURL': foot,
-			'lang': settings.LANGUAGE_CODE, 
+			'lang': settings.LANGUAGE_CODE,
+			'current_path': request.build_absolute_uri(),
 			 }
