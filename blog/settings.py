@@ -44,11 +44,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps', # site maps
+    'django.contrib.sites', # site maps
     'django_summernote', # texteditor
     'posts',
     'config',
     'statics_pages',
 )
+
+SITE_ID = 1 # site maps
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
