@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block seo %}{{post.text|slice:":200"|striptags}}{% endblock %}
-{% block post %}
+{% block content %}
 <a href="{{request.META.HTTP_REFERER}}" class="back">< {% trans "Back" %}</a>
 	<section class='post-container'>
 		<h2 class="post-title">{{post.title}}</h2>
