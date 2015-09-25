@@ -1,4 +1,8 @@
--add tests
+-open graph
+-put it online
+-pip app
+-admin photo
+-search-box
 -contact app
 -add dashboard admin
--better template system
+-cache
