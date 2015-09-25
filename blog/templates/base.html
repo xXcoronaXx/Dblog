@@ -79,6 +79,7 @@
                 {% for foot in FooterURL %}
                     <li class="pure-menu-item"><a href="{{foot.url}}" title="{{foot.name}}" target="blank" class="pure-menu-link">{{foot.name}}</a></li>
                 {% endfor %}
+                    <li class="pure-menu-item"><a href="{% url 'rss' %}" title="RSS" target="blank" class="pure-menu-link"><img src="{% static "images/rss.png" %}" alt="RSS"></a></li>
                 </ul>
             </div>
         {% endblock %}

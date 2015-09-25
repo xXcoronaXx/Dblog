@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^summernote/', include('django_summernote.urls')), # texteditor urls
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': {'blog': BlogSitemap(), 'pages': StaticSitemap()}}, name='django.contrib.sitemaps.views.sitemap'),
-    url(r'^latest/feed/$', LatestPostFeed()),
+    url(r'^latest/feed/$', LatestPostFeed(), name='rss'),
     url(r'^post/', include('posts.urls') ), # url POSTS
     url(r'^page/', include('statics_pages.urls') ), # url PAGES
     url(r'', 'blog.views.home'), # home
